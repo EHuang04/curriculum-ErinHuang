@@ -1,0 +1,11 @@
+/* === estilos.css (CSS externo) === */
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+/* Más reglas externas para mostrar separación de responsabilidades */
+a { color: #0B7285; }
+a:visited { color: #0a5e6a; }
+h3 { color: #084c61; margin-bottom: .25rem; }
+table caption { caption-side: bottom; font-size: .85rem; color: #666; }

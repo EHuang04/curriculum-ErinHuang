@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erin Stella Huang Lin - Currículum</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- CSS interno -->
+  <style>
+    /* === Estilos básicos de maquetación (CSS interno) === */
+    :root {
+      --accent: #0B7285; /* HEX */
+      --light: rgb(232, 244, 252); /* RGB */
+      --ink: #222;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      margin: 0; /* modelo de caja */
+      background: #fafafa;
+      line-height: 1.5;
+    }
+
+    #contenedor {
+      width: min(960px, 92%);  /* % y px */
+      margin: 24px auto;       /* px */
+      padding: 1.25rem;        /* rem */
+      background: white;
+      border: 1px solid #ddd;  /* border del box model */
+      border-radius: 12px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.06);
+    }
+
+    /* Selector de etiqueta */
+    p { color: #333; }
+
+    /* Selector de clase */
+    .destacado { font-weight: bold; color: var(--accent); }
+
+    /* Selector de id */
+    #intro { text-align: justify; }
+
+    /* Selector descendiente */
+    .bloque-citas q { font-style: italic; }
+
+    /* Selector de hijo directo */
+    ul.bullets > li { margin-bottom: .35em; }
+
+    /* Interacción */
+    a:hover, td:hover { text-decoration: underline; cursor: pointer; }
+
+    /* Tabla con thead/tbody/tfoot */
+    table {
+      width: 100%;
+      border-collapse: collapse; /* requisito */
+      margin: 1.25rem 0;
+      font-size: .95rem;         /* rem */
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: .75em;            /* em */
+      text-align: left;
+    }
+    thead { background-color: lightblue; }   /* color por nombre */
+    tfoot { background-color: lightgray; }
+    tbody tr:nth-child(odd) { background-color: var(--light); } /* nth-child */
+    tbody > tr:hover { background-color: #f2f2f2; } /* hover + hijo directo */
+
+    /* Modelo de caja con las citas */
+    .caja {
+      margin: 20px;        /* px */
+      padding: 2em;        /* em */
+      border: 5px solid black;
+      font-size: 1.1rem;   /* rem */
+      width: 50%;          /* % */
+      background-color: rgba(190, 240, 255, 0.836); /* nombre */
+    }
+
+    /* Bloques de color */
+    .color-demo { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem; }
+    .color-demo > div { padding: .5rem 1rem; border-radius: 8px; border: 1px solid #ddd; }
+
+    /* Tarjeta lateral para contacto */
+    .grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 1rem;
+    }
+    .sidebar {
+      border: 2px solid #e5e7eb;
+      padding: 1rem;
+      border-radius: 10px;
+      background: #fcfcff;
+    }
+    .sidebar h3 { margin-top: 0; }
+    .section { margin-top: 1.5rem; }
+    .badge { background: #eef9fb; color: #065a60; padding: .15rem .5rem; border-radius: 1rem; font-size: .8rem; }
+
+    /* === Colores HTML === */
+    .idioma-nombre { color: blueviolet; }              /* color por nombre */
+    .idioma-rgb    { color: rgb(0,128,255); }   /* color por RGB */
+    .idioma-hex    { color: #ff5733; }          /* color por HEX */
+    /* Comentario CSS: las tarjetas .section encapsulan cada bloque semántico del CV */
+  </style>
+</head>
+<body>
+
+  <div id="contenedor">
+    <header>
+      <h1 id="titulo">Currículum de Erin Stella Huang Lin</h1>
+      <!-- CSS en línea -->
+      <h2 style="color: rgb(64, 124, 143); text-decoration: underline; font-weight: 600;">
+        Ingeniera de Software &amp; Consultora de Ciberseguridad Empresarial
+      </h2>
+      <p id="intro">
+        Profesional graduada de <strong>Ingeniería del Software</strong> en la
+        <em>Universidad Técnica Nacional</em> y de <strong>Ciberseguridad Empresarial</strong> en el
+        <em>Tecnológico de Costa Rica</em>.<br>
+        Apasionada por la <em>arquitectura de software segura</em>, la <strong>automatización</strong> y la
+        <strong>gestión de riesgos</strong>. <small>(Disponibilidad para viajar y modalidad híbrida)</small>
+      </p>
+      <hr>
+    </header>
+
+    <section class="grid">
+      <!-- Uso del elemento sidebar para poner los contactos, habilidades claves e idiomas-->
+      <aside class="sidebar">
+        <h3>Información de Contacto</h3>
+        <p><i>erin.stella.huang@example.com</i></p>
+        <p><ins>Disponibilidad inmediata</ins> <span class="badge">Tiempo completo</span></p>
+        <p>Tel: (+506) 8954-6700</p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/erinstella</a></p>
+        <p>Ubicación: Alajuela, Costa Rica<sup>*</sup></p>
+        <p><sub>*Dispuesta a reubicación en el GAM</sub></p>
+
+        <div class="section">
+          <h4>Habilidades Clave</h4>
+          <ul class="bullets">
+            <li class="destacado">Desarrollo web (HTML, CSS, JS)</li>
+            <li>Patrones de diseño y arquitectura</li>
+            <li>Seguridad: hardening, IAM, SIEM, análisis de vulnerabilidades</li>
+            <li>SQL Server, MySQL, automatización con Python</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h4>Idiomas</h4>
+          <ul class="bullets">
+            <li class="idioma-nombre">Español (nativo)</li>
+            <li class="idioma-rgb">Chino mandarín (nativo)</li>
+            <li class="idioma-hex">Inglés (C1)</li>
+            
+          </ul>
+        </div>
+
+      </aside>
+
+      <main>
+  
+        <section class="section bloque-citas">
+          <h3>Perfil</h3>
+          <div class="caja">
+            <p>
+              <q>El software bien diseñado es aquel que sigue principios sólidos y es seguro por defecto.</q>
+            </p>
+            <blockquote>
+              Creo en la mejora continua, la colaboración y la documentación clara. Mi enfoque prioriza la
+              experiencia de usuario, el rendimiento y la seguridad a lo largo del ciclo de vida del desarrollo.
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Formación Académica</h3>
+
+          <!-- Tabla con thead, tbody y tfoot; uso de colspan/rowspan -->
+          <table aria-label="Tabla de formación académica y certificaciones">
+            <thead>
+              <tr>
+                <th>Institución</th>
+                <th>Programa</th>
+                <th>Periodo</th>
+                <th>Logro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">Universidad Técnica Nacional (UTN) </td>
+                <td>Ingeniería del Software</td>
+                <td>2024 – 2027</td>
+                <td><strong>Bachillerato</strong> Ingeniería del Software </td>
+              </tr>
+              <tr>
+                <td>Proyecto de Graduación</td>
+                <td>2027</td>
+                <td>Plataforma de compras segura (mención honorífica)</td>
+              </tr>
+              <tr>
+                <td>Tecnológico de Costa Rica (TEC)</td>
+                <td>Ciberseguridad Empresarial</td>
+                <td>2024 – 2025</td>
+                <td><strong>Técnico</strong> en gestión de riesgos y respuesta a incidentes</td>
+              </tr>
+            
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4"><small>Se puede comprobar títulos y certificados a solicitud.</small></td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        <section class="section">
+          <h3>Experiencia Profesional</h3>
+          <table aria-label="Tabla de experiencia">
+            <thead>
+              <tr>
+                <th>Empresa</th>
+                <th>Rol</th>
+                <th>Periodo</th>
+                <th>Responsabilidades Clave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">Moody's</td>
+                <td>Ingeniera de Software</td>
+                <td>2027 – 2028</td>
+                <td>Desarrollo back-end con prácticas en procedimientos de prueba y migración del código C heredado a Python</td>
+              </tr>
+              <tr>
+                <td>Desarrolladora Full‑Stack</td>
+                <td>2029</td>
+                <td>APIs REST seguras, autenticación con JWT y pruebas automatizadas.</td>
+              </tr>
+              <tr>
+                <td>Banco Nacional de Costa Rica</td>
+                <td>Consultora de Ciberseguridad</td>
+                <td>2024 – Presente</td>
+                <td>Evaluaciones de vulnerabilidad, hardening de servidores, capacitación a equipos.</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4"><em>Referencias disponibles.</em></td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+      </main>
+    </section>
+
+    <footer class="section">
+      <small>&copy; 2025 Erin Stella Huang Lin — Portafolio disponible bajo solicitud.</small>
+    </footer>
+  </div>
+
+</body>
+</html>
